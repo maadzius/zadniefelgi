@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Felgi.MainPage">
+
+    <ScrollView BackgroundColor="AntiqueWhite">
+        <VerticalStackLayout>
+            <Image Source="f0.jpg"
+                   x:Name="imgFelga"/>
+
+            <Label
+                Text="Felga nr.1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="50"
+                x:Name="lblNrFelgi"/>
+
+            <HorizontalStackLayout Spacing="150" Padding="16">
+                <Button Text="Poprzednia"
+                        WidthRequest="150"
+                        BackgroundColor="SaddleBrown"
+                        HorizontalOptions="StartAndExpand"
+                        Clicked="btnPoprzedni"/>
+                <Button Text="Następna"
+                        WidthRequest="150"
+                        BackgroundColor="SaddleBrown"
+                        HorizontalOptions="EndAndExpand"
+                        Clicked="btnNastepny"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label>Wybierz Felgę: </Label>
+                <Entry
+                    Placeholder="Podaj nr felgi (1-10)"
+                    WidthRequest="200"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    x:Name="entNrFelgi"
+                    PlaceholderColor="Black"
+                    />
+            </HorizontalStackLayout>
+
+            <Button Text="Wylosuj dla mnie felgę"
+                    WidthRequest="300"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    BackgroundColor="SaddleBrown"
+                    Clicked="btnLosuj"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
